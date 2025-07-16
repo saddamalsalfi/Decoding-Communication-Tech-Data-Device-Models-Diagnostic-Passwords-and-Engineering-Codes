@@ -47,64 +47,119 @@ This repository is a comprehensive reference for mobile communication diagnostic
 
 ---
 
+
+---
+
 ## 3. 🧪 Universal Android Engineering Codes (USSD/MMI)
 
-These codes are entered in the dialer and work across many Android devices:
+These codes are entered directly into the phone dialer and are commonly supported across many Android devices. They are used for diagnostics, hardware testing, and accessing hidden menus.
 
 | Code               | Function                                 |
 |--------------------|------------------------------------------|
-| *#06#              | Show IMEI number                         |
-| *#*#4636#*#*       | Phone info, battery, usage stats         |
-| *#*#232338#*#*     | Wi-Fi MAC address                        |
-| *#*#1472365#*#*    | GPS test                                 |
-| *#*#2664#*#*       | Touchscreen test                         |
-| *#*#0842#*#*       | Vibration and backlight test             |
-| *#*#0289#*#*       | Audio test                               |
-| *#*#197328640#*#*  | Service mode (Samsung)                   |
-| *#*#7780#*#*       | Factory reset                            |
-| *#*#1111#*#*       | Software version (FTA)                   |
-| *#*#2222#*#*       | Hardware version (FTA)                   |
-| *#*#1234#*#*       | PDA software version                     |
-| *#*#526#*#*        | WLAN test                                |
-| *#*#0283#*#*       | Loopback packet test                     |
-| *#*#7353#*#*       | Quick diagnostics menu                   |
+| `*#06#`            | Show IMEI number                         |
+| `*#*#4636#*#*`     | Phone info, battery, usage stats         |
+| `*#*#232338#*#*`   | Wi-Fi MAC address                        |
+| `*#*#1472365#*#*`  | GPS test                                 |
+| `*#*#2664#*#*`     | Touchscreen test                         |
+| `*#*#0842#*#*`     | Vibration and backlight test             |
+| `*#*#0289#*#*`     | Audio test                               |
+| `*#*#197328640#*#*`| Service mode (Samsung)                   |
+| `*#*#7780#*#*`     | Factory reset (soft reset)               |
+| `*#*#1111#*#*`     | Software version (FTA)                   |
+| `*#*#2222#*#*`     | Hardware version (FTA)                   |
+| `*#*#1234#*#*`     | PDA software version                     |
+| `*#*#526#*#*`      | WLAN test                                |
+| `*#*#0283#*#*`     | Loopback packet test                     |
+| `*#*#7353#*#*`     | Quick diagnostics menu                   |
+
+> ⚠️ **Note:** Some codes may not work on all devices or may be disabled by carriers or manufacturers.
 
 ---
 
-## 4. 🏭 Brand-Specific Codes (2025)
+---
 
-### Samsung
-- *#0*# – General hardware test menu  
-- *#0011# – Service mode (network info)  
-- *#9090# – Diagnostic config  
-- *#0808# – USB settings  
-- *#7284# – UART/USB config  
+## 4. 🏭 Brand-Specific Engineering Codes (2025)
 
-### Huawei
-- *#*#2846579#*#* – Project menu  
-- *#*#2846#*#* – Hardware test  
-- *#*#14789632#*#* – Battery and temperature  
-
-### Xiaomi
-- *#*#6484#*#* – Hardware test menu  
-- *#*#4636#*#* – Device info  
-- *#*#86583#*#* – Disable VoLTE carrier check  
-
-### OnePlus
-- *#808# – Engineering test mode  
-- *#801# – Engineering switch  
-- *#1234# – Software version  
+These codes are specific to certain manufacturers and provide access to advanced diagnostic, testing, and configuration menus. Use them with caution, as some may reset or alter system settings.
 
 ---
 
-## 🧠 Why This Data Matters
+### 📱 Samsung
 
-This repository is useful for:
+| Code         | Function                             |
+|--------------|--------------------------------------|
+| `*#0*#`      | General hardware test menu           |
+| `*#0011#`    | Service mode (network info)          |
+| `*#9090#`    | Diagnostic configuration             |
+| `*#0808#`    | USB settings                         |
+| `*#7284#`    | UART/USB configuration               |
 
-- 🔧 **Technicians**: Diagnosing and repairing devices using engineering tools  
-- 🌐 **Service Providers**: Managing device configurations across networks  
-- 👨‍💻 **Developers**: Understanding device internals and firmware behavior  
+---
 
-Every sequence of numbers and characters in this dataset has a specific technical meaning, contributing to the smooth operation and maintenance of mobile communication systems.
+### 📱 Huawei
+
+| Code               | Function                          |
+|--------------------|-----------------------------------|
+| `*#*#2846579#*#*`  | Project menu                      |
+| `*#*#2846#*#*`     | Hardware test                     |
+| `*#*#14789632#*#*` | Battery and temperature info      |
+
+---
+
+### 📱 Xiaomi
+
+| Code               | Function                          |
+|--------------------|-----------------------------------|
+| `*#*#6484#*#*`     | Hardware test menu                |
+| `*#*#4636#*#*`     | Device info                       |
+| `*#*#86583#*#*`    | Disable VoLTE carrier check       |
+
+---
+
+### 📱 OnePlus
+
+| Code         | Function                             |
+|--------------|--------------------------------------|
+| `*#808#`     | Engineering test mode                |
+| `*#801#`     | Engineering switch                   |
+| `*#1234#`    | Software version                     |
+
+---
+
+### 📱 Vivo
+
+| Code         | Function                             |
+|--------------|--------------------------------------|
+| `*#558#`     | Engineering mode                     |
+| `*#*#7777#*#*`| Factory reset                        |
+| `*#*#4838#*#*`| Phone info and usage stats           |
+| `*#*#2637643#*#*` | MTK Engineering Mode (for MediaTek models) |
+
+---
+
+### 📱 Realme
+
+| Code         | Function                             |
+|--------------|--------------------------------------|
+| `*#899#`     | Engineering mode                     |
+| `*#*#4636#*#*`| Phone info, battery, usage stats     |
+| `*#*#232339#*#*`| Wi-Fi test                         |
+| `*#*#426#*#*` | Google Play Services diagnostics     |
+
+---
+
+### 🍏 Apple (iPhone)
+
+Apple devices do not support USSD/MMI engineering codes like Android. However, the following codes are available for **carrier and diagnostic use**:
+
+| Code         | Function                             |
+|--------------|--------------------------------------|
+| `*3001#12345#*` | Field Test Mode (signal strength, LTE info) |
+| `*#06#`       | Show IMEI number                    |
+| `*#67#`       | Call forwarding when busy           |
+| `*#21#`       | Call forwarding status              |
+| `*#33#`       | Call barring status                 |
+
+> ⚠️ **Note:** Apple restricts deep diagnostic access to authorized service providers. Most advanced diagnostics require Apple Configurator or Apple Service Toolkit.
 
 ---
